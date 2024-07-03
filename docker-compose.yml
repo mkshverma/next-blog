@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./:/app:rw
+      - modules:/app/node_modules
+    ports:
+      - 3000:3000
+
+volumes:
+  modules:
+    external: false
